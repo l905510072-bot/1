@@ -14,6 +14,7 @@ const POSTER_URL = "https://private-us-east-1.manuscdn.com/sessionFile/xwOJYriOl
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,10 +91,10 @@ export default function Home() {
                 立即報名
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <a href="#about" className="px-8 py-3 border-2 border-accent text-accent font-semibold rounded-lg transition-all duration-300 hover:bg-accent/10 inline-flex items-center justify-center gap-2">
+              <button onClick={() => setShowModal(true)} className="px-8 py-3 border-2 border-accent text-accent font-semibold rounded-lg transition-all duration-300 hover:bg-accent/10 inline-flex items-center justify-center gap-2">
                 了解更多
                 <ArrowRight className="w-5 h-5" />
-              </a>
+              </button>
             </div>
 
             <div className="pt-4 border-t border-gray-600">
@@ -269,6 +270,79 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
+          <div className="bg-card rounded-lg max-w-2xl max-h-[80vh] overflow-y-auto w-full">
+            <div className="sticky top-0 bg-card border-b border-gray-700 p-6 flex justify-between items-center">
+              <h2 className="text-2xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>燈塔影展詳細信息</h2>
+              <button onClick={() => setShowModal(false)} className="text-gray-400 hover:text-white transition-colors">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="p-6 space-y-6 text-gray-300">
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>影展定位</h3>
+                <p>燈塔影展（Lighthouse Film Festival, LFF）由臺北基督學院發起，聚焦全球基督徒學生的福音影像創作。本影展致力於鼓勵青年以劇情敘事呈現信仰、盼望、救贖與生命更新的故事，並透過作品交流與策展實踐，培育新世代以影像作見證的創作者。</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>徵件類別</h3>
+                <p>劇情片／劇情長片（Narrative Feature Film / Fiction）</p>
+                <ul className="list-disc list-inside space-y-1 mt-2 text-sm">
+                  <li>本屆僅徵選劇情片</li>
+                  <li>片長規範：20–90 分鐘</li>
+                  <li>本屆不收：紀錄片、動畫、MV、實驗片</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>參賽資格</h3>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>限學生身分參賽：報名者須為在學學生（大學、研究所、神學院或同等教育／訓練機構皆可）</li>
+                  <li>可個人或團隊報名；若為團隊，導演或主要創作者須具學生身分</li>
+                  <li>參賽者需可提供有效學生身分證明（學生證、在學證明或註冊證明等）</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>作品主題方向</h3>
+                <p className="text-sm mb-2">本影展鼓勵作品以福音為核心，呈現以下方向之一或多項：</p>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>信仰敘事、生命見證、呼召與回應</li>
+                  <li>盼望、赦免、重建、愛與真理</li>
+                  <li>青年信仰處境、關係修復、傷痛與醫治</li>
+                  <li>以基督信仰價值回應世界議題（家庭、正義、饒恕、良善、誠實等）</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>字幕規則</h3>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>參賽作品須提供英文字幕（English Subtitles Required）</li>
+                  <li>若原片語言非英文，請提供可清楚閱讀之英文字幕檔（建議 SRT 格式）或內嵌字幕版本</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>評選重點</h3>
+                <ol className="list-decimal list-inside space-y-1 text-sm">
+                  <li>福音核心與價值清晰度</li>
+                  <li>劇情敘事完整性與角色塑造</li>
+                  <li>主題深度與情感真實性</li>
+                  <li>影像語言與整體完成度</li>
+                  <li>創意與表達風格</li>
+                </ol>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-accent mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>著作權與授權聲明</h3>
+                <ul className="list-disc list-inside space-y-1 text-sm">
+                  <li>參賽者須保證作品為原創或已取得合法授權（含音樂、影像素材、劇本改編等）</li>
+                  <li>參賽者同意主辦單位得於影展推廣、徵件宣傳、入圍公告與成果展示之範圍內，使用作品之片名、劇照、海報、預告片與片段（非商業用途），並註明創作者資訊</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="bg-background border-t border-gray-700 py-12">
