@@ -35,8 +35,8 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <img src={LOGO_URL} alt="LGFF Logo" className="h-12 w-auto" />
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-accent" style={{ fontFamily: "'Playfair Display', serif" }}>LGFF</h1>
-              <p className="text-xs text-gray-400">灯塔福音影展</p>
+              <h1 className="text-lg font-bold text-accent" style={{ fontFamily: "'Playfair Display', serif" }}>LFF</h1>
+              <p className="text-xs text-gray-400">灯塔影展</p>
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -73,10 +73,10 @@ export default function Home() {
             <div>
               <div className="gold-divider mb-6"></div>
               <h1 className="text-5xl md:text-6xl font-bold text-accent leading-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Lighthouse Gospel Film Festival
+                Lighthouse Film Festival
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold text-white mt-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                灯塔福音影展
+                灯塔影展
               </h2>
             </div>
 
@@ -122,7 +122,7 @@ export default function Home() {
 
             <div className="space-y-6 text-gray-300">
               <p>
-                <strong className="text-accent">燈塔福音影展（LGFF）</strong>由臺北基督學院發起，是一個全球性的平台，致力於展示由基督徒學生創作的福音中心敘事故事片。
+                <strong className="text-accent">燈塔影展（LFF）</strong>由臺北基督學院發起，是一個全球性的平台，致力於展示由基督徒學生創作的福音中心敘事故事片。
               </p>
 
               <p>
@@ -290,7 +290,7 @@ export default function Home() {
               <h3 className="text-lg font-bold text-accent mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>聯絡方式</h3>
               <p className="text-gray-400 text-sm">
                 主辦單位：臺北基督學院<br />
-                Lighthouse Gospel Film Festival (LGFF)
+                Lighthouse Film Festival (LFF)
               </p>
             </div>
           </div>
