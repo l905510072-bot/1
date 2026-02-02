@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
  */
 
 const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663286619585/HpBToCsyiUUeGfMJ.jpg";
-const POSTER_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663286619585/kYchOzMOLpULxtne.jpg";
+const POSTER_URL = "https://private-us-east-1.manuscdn.com/sessionFile/xwOJYriOllabhN4pyZGXPW/sandbox/UEplEJ728DdVehmlikp6AT-img-1_1770043239000_na1fn_bGlnaHRob3VzZS1oZXJvLWJn.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
