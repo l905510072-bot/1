@@ -460,6 +460,7 @@ export default function Home() {
               <div className="bg-card p-6 rounded-lg border border-gray-700">
                 <p className="text-gray-300 mb-2">主辦單位</p>
                 <p className="text-accent font-semibold">臺北基督學院</p>
+                <p className="text-accent font-semibold">承業法律事務所</p>
               </div>
             </div>
 
