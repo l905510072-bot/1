@@ -461,7 +461,7 @@ export default function Home() {
                <p className="text-gray-300 mb-2">主辦單位</p >
   
                {/* 用 flex 让两个单位横向排列 */}
-               <div className="flex gap-4">
+               <div className="flex gap-4 justify-center">
                <p className="text-accent font-semibold">臺北基督學院</p >
                <p className="text-accent font-semibold">| 承業法律事務所</p >
               </div>
